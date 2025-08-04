@@ -34,7 +34,7 @@ new \Kirki\Field\Toggle(
 		'settings'    => 'elevate_alerts_notice_status',
 		'label'       => esc_html__( 'Show notice', 'elevate-alerts' ),
 		'section'     => 'elevate_alerts_notice',
-		'default'     => '1',
+		'default'     => '0',
 		'priority'    => 10,
         'option_type' => 'option',
 		'transport'   => 'refresh'
@@ -122,84 +122,6 @@ new \Kirki\Field\Dimensions(
 			]
 		]
 	]
-);
-
-
-// Icon Settings 
-
-new \Kirki\Section(
-
-	'elevate_alerts_notice_icon_section',
-	  [
-		  'priority'    => 2,
-		  'title'       => esc_html__( 'Icon Settings', 'elevate-alerts' ),
-      'panel'       =>  'elevate_alerts_panel'
-	  ]
-  
-  );
-
-
-
-new \Kirki\Field\Toggle(
-	[
-		'settings'    => 'elevate_alerts_notice_icon_status',
-		'label'       => esc_html__( 'Activate Icon', 'elevate-alerts' ),
-		'section'     => 'elevate_alerts_notice_icon_section',
-		'default'     => '1',
-		'priority'    => 10,
-		'transport'   => 'refresh',
-        'option_type' => 'option',
-    ],
-
-);
-
-
-$icon_options = [
-	"System/alert-fill" => "System/alert-fill",
-	"System/information-fill" => "System/information-fill", 
-	"System/notification-badge-fill" => "System/notification-badge-fill",
-	"System/time-fill" => "System/time-fill",
-	"System/timer-fill" => "System/timer-fill",
-	"System/error-warning-fill" => "System/error-warning-fill",
-	"System/check-fill" => "System/check-fill",
-	"System/star-fill" => "System/star-fill",
-	"System/lock-fill" => "System/lock-fill",
-	"System/shield-fill" => "System/shield-fill",
-	"Finance/shopping-cart-fill" => "Finance/shopping-cart-fill",
-	"Finance/gift-fill" => "Finance/gift-fill",
-	"Finance/discount-percent-fill" => "Finance/discount-percent-fill",
-	"Finance/coupon-fill" => "Finance/coupon-fill",
-	"Finance/trophy-fill" => "Finance/trophy-fill",
-	"Business/megaphone-fill" => "Business/megaphone-fill",
-	"Business/mail-fill" => "Business/mail-fill",
-	"Business/calendar-fill" => "Business/calendar-fill",
-	"Business/flag-fill" => "Business/flag-fill",
-	"Business/award-fill" => "Business/award-fill",
-	"System/refresh-fill" => "System/refresh-fill",
-	"System/download-fill" => "System/download-fill"
-];
-
-
-$field_option = array();
-
-foreach ($icon_options as $icon_class => $option):
-
-    $field_option[$icon_class] = ELEVATE_ALERTS_URL . "/assets/img/icons/$option.svg";
-
-endforeach;
-
-
-new \Kirki\Field\Radio_Image(
-	[
-		'settings'    => 'elevate_alerts_icon',
-        'option_type' => 'option',
-		'label'       => esc_html__( 'Notice Icon', 'elevate-alerts' ),
-		'section'     => 'elevate_alerts_notice_icon_section',
-		'default'     => 'left',
-		'priority'    => 10,
-		'choices'     => $field_option,
-
-    ],
 );
 
 
