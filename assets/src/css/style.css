@@ -1,0 +1,11 @@
+@import "./notice.css"; 
+
+
+
+
+:root {
+    --notice-background-color: #c2ece7;
+    --notice-text-color: #3e625d;
+    --notice-button-background: #77b5ac;
+}
+

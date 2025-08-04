@@ -1,0 +1,269 @@
+@keyframes ring {
+  0% {
+    transform: rotate(0);
+  }
+  1% {
+    transform: rotate(30deg);
+  }
+  3% {
+    transform: rotate(-28deg);
+  }
+  5% {
+    transform: rotate(34deg);
+  }
+  7% {
+    transform: rotate(-32deg);
+  }
+  9% {
+    transform: rotate(30deg);
+  }
+  11% {
+    transform: rotate(-28deg);
+  }
+  13% {
+    transform: rotate(26deg);
+  }
+  15% {
+    transform: rotate(-24deg);
+  }
+  17% {
+    transform: rotate(22deg);
+  }
+  19% {
+    transform: rotate(-20deg);
+  }
+  21% {
+    transform: rotate(18deg);
+  }
+  23% {
+    transform: rotate(-16deg);
+  }
+  25% {
+    transform: rotate(14deg);
+  }
+  27% {
+    transform: rotate(-12deg);
+  }
+  29% {
+    transform: rotate(10deg);
+  }
+  31% {
+    transform: rotate(-8deg);
+  }
+  33% {
+    transform: rotate(6deg);
+  }
+  35% {
+    transform: rotate(-4deg);
+  }
+  37% {
+    transform: rotate(2deg);
+  }
+  39% {
+    transform: rotate(-1deg);
+  }
+  41% {
+    transform: rotate(1deg);
+  }
+
+  43% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes beat {
+  0%, 50%, 100% { transform: scale(1.1, 1.1); }
+  30%, 80% { transform: scale(0.92, 0.95); }
+}
+
+.elevate-alerts-notice {
+  height: 80px;
+  color: var(--notice-text-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 2em;
+  transition: margin-top 0.9s easeOutExpo, transform 0.3s linear;
+  transform-origin: top;
+  background-color: var(--notice-background-color);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 1em 4em 1em 2em;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &--collapsed {
+    margin-top: -5em;
+    transform: scaleY(0.8);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+  }
+
+  &__icon {
+    transform-origin: center;
+    animation: beat 1.6s 0.7s ease-in-out infinite;
+    opacity: .6;
+    width: 1.5em;
+    height: 1.5em;
+    fill: currentColor;
+    flex-shrink: 0;
+    
+    svg {
+      height: 20px;
+    }
+
+    /* Special animation for bell/notification icons */
+    &[class*="notification"],
+    &[class*="bell"],
+    &[class*="alarm"] {
+      animation: ring 6s 0.7s ease-in-out infinite;
+    }
+
+  }
+
+  &__close {
+    position: absolute;
+    right: 1em;
+    padding: 0.5em 1em;
+    background: none;
+    border: none;
+    color: var(--black);
+    opacity: 0.5;
+    cursor: pointer;
+    transform-origin: center;
+    transition: all var(--very-short-duration) easeOutExpo;
+    .icon {
+      height: 1em;
+      width: 1em;
+    }
+    &:hover,
+    &:focus {
+      transform: scale(1.25);
+    }
+    &:focus-visible {
+      outline: none;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__link {
+
+    padding: 9px 32px 12px;
+    background: var(--notice-button-background);
+    border-radius: 50px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 -4px 0 rgba(0,0,0,.3) inset;
+    transition: all 0.3s easeOutCubic;
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &--invisible {
+      visibility: hidden;
+      display:none;
+    }
+
+  }
+
+  .elevate-alerts-countdown {
+    display: flex;
+    column-gap: 1px;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0 10px;
+
+    &__element {
+      background-color: hsla(0,0%,100%,.25);
+      display: grid;
+      justify-content: center;
+      min-width: 42px;
+      padding: 5px 6px;
+      text-align: center;
+
+      .value {
+        font-size: 0.78em;
+        font-weight: bold;
+      }
+      
+      .unit {
+        text-transform: uppercase;
+        font-size: .5em;
+        font-weight: bolder;
+        opacity: .68;
+      }
+    }
+
+    &--invisible {
+      visibility: hidden;
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: 580px) {
+  .elevate-alerts-notice {
+    text-align: center;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .elevate-alerts-notice {
+    padding: 2em 1em 1em;
+
+    &__content {
+      flex-wrap: wrap;
+    }
+
+    .elevate-alerts-countdown {
+      .unit {
+        display: none;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .elevate-alerts-notice {
+    position: relative;
+    flex-wrap: wrap;
+    height: fit-content !important;
+    row-gap: 10px;
+    justify-content: center;
+
+    &__content {
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__close {
+      top: 10px;
+    }
+    .elevate-alerts-countdown {
+      order: 2;
+    }
+  }
+}

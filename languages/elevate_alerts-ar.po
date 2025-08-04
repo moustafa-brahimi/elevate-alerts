@@ -1,0 +1,725 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Elevate Alerts\n"
+"POT-Creation-Date: 2023-12-23 04:23+0100\n"
+"PO-Revision-Date: 2023-12-23 04:30+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: elevate-alerts.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: elevate-alerts.php:77
+msgid "Kirki Customizer Framework"
+msgstr "مكتبة كيركي للتخصيص"
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr "تثبيت الإضافات الضرورية"
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr "ثبت الإضافات"
+
+#. translators: %s: plugin name.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "تثبيت الإضافة %s"
+
+#. translators: %s: plugin name.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "تحديث الاضافة: %s"
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:343
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "القالب بحاجة الى الإضافة: %1$s."
+msgstr[1] "القالب بحاجة الى الإضافة: %1$s."
+msgstr[2] "القالب بحاجة الى الإضافتين: %1$s."
+msgstr[3] "القالب بحاجة الى الإضافات: %1$s."
+msgstr[4] "القالب بحاجة الى الإضافات: %1$s."
+msgstr[5] "القالب بحاجة الى الإضافات: %1$s."
+
+#. translators: 1: plugin name(s).
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:349
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#. translators: 1: plugin name(s).
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:355
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#. translators: 1: plugin name(s).
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:361
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#. translators: 1: plugin name(s).
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:367
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#. translators: 1: plugin name(s).
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:373
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:378
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "إبدا تثبيت الاضافة"
+msgstr[1] "إبدا تثبيت الاضافة"
+msgstr[2] "إبدا تثبيت الاضافتان"
+msgstr[3] "إبدا تثبيت الاضافات"
+msgstr[4] "إبدا تثبيت الاضافات"
+msgstr[5] "إبدا تثبيت الاضافات"
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:383
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "إبدا تحديث الاضافة"
+msgstr[1] "إبدا تحديث الاضافة"
+msgstr[2] "إبدا تحديث الاضافتان"
+msgstr[3] "إبدا تحديث الاضافات"
+msgstr[4] "إبدا تحديث الاضافات"
+msgstr[5] "إبدا تحديث الاضافات"
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:388
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "فعل الاضافة"
+msgstr[1] "فعل الاضافة"
+msgstr[2] "فعل الاضافتان"
+msgstr[3] "فعل الاضافات"
+msgstr[4] "فعل الاضافات"
+msgstr[5] "فعل الاضافات"
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:393
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:920
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2626
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3673
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:394
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:395
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3045
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#. translators: 1: plugin name.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:1027
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:1214
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2435
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2481
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#. translators: 1: number of plugins.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2485
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#. translators: 1: number of plugins.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2489
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#. translators: 1: number of plugins.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2493
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3591
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3596
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3602
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3610
+msgid "Show Details"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3602
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3610
+msgid "Hide Details"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3610
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: includes/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php:3613
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/countdown.php:29
+msgid "Day"
+msgid_plural "Days"
+msgstr[0] "يوم"
+msgstr[1] "يوم"
+msgstr[2] "يومان"
+msgstr[3] "أيام"
+msgstr[4] "يوما"
+msgstr[5] "يوم"
+
+#: includes/countdown.php:31
+msgid "Hour"
+msgid_plural "Hours"
+msgstr[0] "ساعة"
+msgstr[1] "ساعة"
+msgstr[2] "ساعتان"
+msgstr[3] "ساعات"
+msgstr[4] "ساعة"
+msgstr[5] "ساعة"
+
+#: includes/countdown.php:33
+msgid "Minute"
+msgid_plural "Minutes"
+msgstr[0] "دقيقة"
+msgstr[1] "دقيقة"
+msgstr[2] "دقيقتان"
+msgstr[3] "دقائق"
+msgstr[4] "دقيقة"
+msgstr[5] "دقيقة"
+
+#: includes/countdown.php:35
+msgid "Second"
+msgid_plural "Seconds"
+msgstr[0] "ثانية"
+msgstr[1] "ثانية"
+msgstr[2] "ثانيتان"
+msgstr[3] "ثواني"
+msgstr[4] "ثانية"
+msgstr[5] "ثانية"
+
+#. Plugin Name of the plugin/theme
+#: includes/customizer.php:12
+msgid "Elevate Alerts"
+msgstr "أيليفايت"
+
+#: includes/customizer.php:13
+msgid "Elevate Alerts Settings."
+msgstr "إعدادات إيليفايت."
+
+#: includes/customizer.php:22
+msgid "General Settings"
+msgstr "الإعدادات العامة"
+
+#: includes/customizer.php:32
+msgid "Show notice"
+msgstr "أظهار الملاحظة"
+
+#: includes/customizer.php:45
+msgid "Notice"
+msgstr "الملاحظة"
+
+#: includes/customizer.php:47 template-parts/notice.php:21
+msgid "Lorem Ipsum is simply dummy text of the printing and typesetting"
+msgstr "هذا مثال لنص الملاحظة ليجعلك تركز"
+
+#: includes/customizer.php:57
+msgid "Notice background color"
+msgstr "لون خلفية الملاحظة"
+
+#: includes/customizer.php:77 includes/customizer.php:292
+msgid "Notice Typography"
+msgstr "إعدادات خط الملاحظة"
+
+#: includes/customizer.php:104 includes/customizer.php:257
+#: includes/customizer.php:489
+msgid "Dimensions"
+msgstr "الأبعاد"
+
+#: includes/customizer.php:111
+msgid "Height"
+msgstr "الإرتفاع"
+
+#: includes/customizer.php:132
+msgid "Icon Settings"
+msgstr "إعدادات الأيقونة"
+
+#: includes/customizer.php:143
+msgid "Activate Icon"
+msgstr "تفعيل الأيقونة"
+
+#: includes/customizer.php:184
+msgid "Notice Icon"
+msgstr "شكل الأيقونة"
+
+#: includes/customizer.php:201
+msgid "Button Settings"
+msgstr "إعدادات الزر"
+
+#: includes/customizer.php:212
+msgid "Activate Button"
+msgstr "تفعيل الزر"
+
+#: includes/customizer.php:225
+msgid "Button text"
+msgstr "إعدادات الزر"
+
+#: includes/customizer.php:227 template-parts/notice.php:29
+msgid "Buy Now"
+msgstr "أطلب الآن"
+
+#: includes/customizer.php:238
+msgid "Button background color"
+msgstr "لون خلفية الزر"
+
+#: includes/customizer.php:271 includes/customizer.php:503
+msgid "Padding Top"
+msgstr "الهامش العلوي"
+
+#: includes/customizer.php:272 includes/customizer.php:504
+msgid "Padding Bottom"
+msgstr "الهامش السفلي"
+
+#: includes/customizer.php:273 includes/customizer.php:505
+msgid "Padding Left"
+msgstr "الهامش على اليسار"
+
+#: includes/customizer.php:274 includes/customizer.php:506
+msgid "Padding Right"
+msgstr "الهامش على اليمين"
+
+#: includes/customizer.php:322
+msgid "Button URL"
+msgstr "رابط الزر"
+
+#: includes/customizer.php:335
+msgid "Open Link In New Tab"
+msgstr "فتح الرابط في علامة تبويب جديدة"
+
+#: includes/customizer.php:352
+msgid "Count Down"
+msgstr "العداد ( المؤقت )"
+
+#: includes/customizer.php:355
+#, php-format
+msgid "The countdown is calculated according to the server clock %s"
+msgstr "العداد يتم إحتسابه بالإعتماد على ساعة الخادم %s"
+
+#: includes/customizer.php:367
+msgid "Activate Countdown"
+msgstr "تفعيل العداد"
+
+#: includes/customizer.php:381
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#: includes/customizer.php:394
+msgid "End Time"
+msgstr "وقت النهاية"
+
+#: includes/customizer.php:398
+msgid "Time Format hh:mm:ss"
+msgstr ""
+
+#: includes/customizer.php:407
+msgid "Background Color"
+msgstr "لون الخلفية"
+
+#: includes/customizer.php:429
+msgid "Typography"
+msgstr "أعدادات الخط"
+
+#: includes/customizer.php:460
+msgid "Typography (unit)"
+msgstr "أعدادات الخط ( الوحدات )"
+
+#: template-parts/notice.php:40
+msgid "Collapse the notice"
+msgstr "أغلق الملاحظة"
+
+#. Description of the plugin/theme
+msgid ""
+"Elevate Alerts is a plugin that adds a classy notification on top of the "
+"website"
+msgstr "أيليفايت هي أضافة ووردبرس , تمنح إمكانية إضافة ملاحظة أعلا الموقع"
+
+#. Author of the plugin/theme
+msgid "Abdrezzaq Khatiri"
+msgstr "عبد الرزاق خثيري"
