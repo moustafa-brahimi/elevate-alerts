@@ -1,7 +1,8 @@
 === Elevate Alerts ===
-Contributors: moustafabrahimi
+Plugin Name: Elevate Alerts - Attractive Notification Banners
+Contributors: usuual
 Donate link: https://github.com/moustafa-brahimi
-Tags: alerts, notifications, announcements, countdown, banner, customizer, promotion, marketing, notice, popup
+Tags: alerts, notifications, countdown, banner, customizer
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.4
@@ -17,16 +18,15 @@ Create beautiful, customizable notification banners with countdown timers to eng
 
 = Key Features =
 
-* ** Visual Customizer Integration** - Complete control through WordPress Customizer with live preview
-* ** Dynamic Countdown Timers** - Create urgency with precise countdown functionality
-* ** Smart Icon System** - Choose from 11 professional icons including FontAwesome integration
-* ** Call-to-Action Buttons** - Integrated buttons with custom URLs and new tab options
-* ** Fully Responsive Design** - Perfect display on all devices and screen sizes
-* ** Advanced Typography** - Complete font, color, and spacing controls
-* ** Flexible Color Schemes** - Match your brand with unlimited color options
-* ** Granular Positioning** - Precise padding, margins, and dimensional controls
-* ** User-Friendly Dismissal** - Collapsible alerts that remember user preferences
-* ** Translation Ready** - Full internationalization support
+* **Visual Customizer Integration** - Complete control through WordPress Customizer with live preview
+* **Dynamic Countdown Timers** - Create urgency with precise countdown functionality
+* **Call-to-Action Buttons** - Integrated buttons with custom URLs and new tab options
+* **Fully Responsive Design** - Perfect display on all devices and screen sizes
+* **Advanced Typography** - Complete font, color, and spacing controls
+* **Flexible Color Schemes** - Match your brand with unlimited color options
+* **Granular Positioning** - Precise padding, margins, and dimensional controls
+* **User-Friendly Dismissal** - Collapsible alerts that remember user preferences
+* **Translation Ready** - Full internationalization support
 
 = Perfect For =
 
@@ -39,7 +39,7 @@ Create beautiful, customizable notification banners with countdown timers to eng
 * **Holiday Promotions** - Seasonal campaigns and special offers
 * **Important Updates** - Critical information delivery
 
-= 🛠️ Advanced Customization =
+= Advanced Customization =
 
 **Content Management:**
 - Rich text editor support for formatted content
@@ -50,7 +50,6 @@ Create beautiful, customizable notification banners with countdown timers to eng
 - Typography controls (font family, size, weight, spacing)
 - Color customization (background, text, button colors)
 - Dimensional controls (padding, margins, heights)
-- Icon selection with preview
 
 **Countdown Functionality:**
 - Server-synchronized timing for accuracy
@@ -64,9 +63,10 @@ Create beautiful, customizable notification banners with countdown timers to eng
 - Comprehensive styling controls
 - Show/hide toggle with smooth transitions
 
-= 🔧 Technical Specifications =
+= Technical Specifications =
 
-* **Framework**: Built on Kirki Customizer Framework for robust functionality
+* **Framework**: Built on Kirki Customizer Framework from WordPress.org for robust functionality
+* **Dependencies**: Uses TGMPA (TGM Plugin Activation) for dependency management
 * **Performance**: Lightweight code with optimized loading
 * **Compatibility**: WordPress 5.0+ with modern PHP support
 * **Standards**: Follows WordPress coding standards and best practices
@@ -102,14 +102,14 @@ Create beautiful, customizable notification banners with countdown timers to eng
 2. Navigate to **Plugins > Add New**
 3. Search for "Elevate Alerts"
 4. Click **Install Now** and then **Activate**
-5. The plugin will prompt you to install the required Kirki Customizer Framework
+5. The plugin will automatically prompt you to install the required **Kirki Customizer Framework** from the WordPress.org directory
 
 = Manual Installation =
 
 1. Download the plugin ZIP file
 2. Upload to `/wp-content/plugins/elevate-alerts/` directory
 3. Activate the plugin through the WordPress **Plugins** menu
-4. Install the Kirki Customizer Framework when prompted
+4. Install the **Kirki Customizer Framework** from WordPress.org when prompted via TGMPA
 
 = Configuration =
 
@@ -137,10 +137,6 @@ Yes, Elevate Alerts is fully responsive and optimized for all device sizes. The 
 
 Yes, users can collapse/dismiss alerts by clicking the close button. The plugin remembers their preference using browser cookies, so the alert won't reappear for that user session.
 
-= How do I add custom icons? =
-
-The plugin includes 11 pre-designed icons including social media, e-commerce, and general notification icons. You can select from these options in the **Icon Settings** section of the customizer.
-
 = Can I use HTML in the alert content? =
 
 Yes, the content editor supports HTML and allows formatting. However, all content is properly sanitized for security using WordPress's `wp_kses_post()` function.
@@ -167,7 +163,6 @@ When a countdown reaches zero, the timing elements continue to function. You can
 2. **Customizer Interface** - Complete control panel showing all customization options
 3. **Typography Controls** - Advanced font and text styling options
 4. **Color Customization** - Flexible color scheme controls for branding
-5. **Icon Selection** - Choose from 11 professional icons with live preview
 6. **Countdown Settings** - Easy date/time configuration with server clock reference
 7. **Button Configuration** - Call-to-action button setup with styling options
 8. **Mobile Responsive** - Perfect display across all device sizes
@@ -178,10 +173,10 @@ When a countdown reaches zero, the timing elements continue to function. You can
 **Release Date: August 4, 2025**
 
 * **Initial Release**
-* Complete WordPress Customizer integration
+* Complete WordPress Customizer integration via Kirki Framework
+* TGMPA integration for seamless dependency management
 * Countdown timer functionality with server synchronization
 * Advanced typography and color controls
-* Icon system with 11 professional options
 * Call-to-action button integration
 * Fully responsive design implementation
 * Security hardening and input sanitization
@@ -205,3 +200,41 @@ We welcome contributions! Please visit our GitHub repository to submit issues, f
 == Privacy Policy ==
 
 Elevate Alerts uses browser cookies only to remember user dismissal preferences. No personal data is collected or transmitted to external services. All functionality operates entirely within your WordPress installation.
+
+== Third-Party Assets & Licensing ==
+
+This plugin includes the following third-party assets, all of which are GPL-compatible:
+
+= Dependencies =
+
+**Kirki Customizer Framework**
+- Source: WordPress.org Plugin Directory
+- License: MIT License (GPL-compatible)
+- Purpose: Advanced WordPress Customizer functionality
+- URL: https://wordpress.org/plugins/kirki/
+
+**TGM Plugin Activation (TGMPA)**
+- Version: 2.6.1
+- License: GPL v2 or later
+- Purpose: Plugin dependency management
+- Author: Thomas Griffin, Gary Jones, Juliette Reinders Folmer
+- URL: http://tgmpluginactivation.com/
+
+= Icon Library =
+
+**Remix Icon**
+- License: Apache License 2.0 (GPL-compatible)
+- Purpose: Professional icon set for notifications
+- Total Icons: 2000+ icons across multiple categories
+- Categories Used: System, Business, Finance, Logos
+- URL: https://remixicon.com/
+- Note: Only icons actually used in the plugin are included in the distribution
+
+= Code Libraries =
+
+**PostCSS & Webpack**
+- Used for: Asset compilation during development
+- License: MIT License (GPL-compatible)
+- Note: Only compiled output is included in distribution, not source tools
+
+All assets have been verified for GPL compatibility and licensing compliance. No proprietary or restricted-license assets are included in this plugin.

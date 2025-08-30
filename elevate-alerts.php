@@ -6,8 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /*
-* Plugin Name: Elevate Alerts
-* Plugin URI:          https://wordpress.org/plugins/elevate-alerts/
+* Plugin Name: Elevate Alerts - Attractive Notification Banners
+* Plugin URI:          https://github.com/moustafa-brahimi/elevate-alerts
 * Description: Create elegant, customizable notification banners with countdown timers for announcements, promotions, and important messages. Fully integrated with WordPress Customizer for easy styling and content management.
 * Requires at least:   5.0
 * Tested up to:        6.8
@@ -19,8 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 * Domain Path:         /languages
 * License: GPLv2 or later
 * License URI: https://www.gnu.org/licenses/gpl-2.0.html
-* Network: false
-* Requires Plugins: kirki
 */
 
 define( "ELEVATE_ALERTS_URL", plugins_url("",__FILE__) );
@@ -65,52 +63,68 @@ function elevate_alerts_add_to_header() {
 
 add_action('wp_footer', 'elevate_alerts_add_to_header');
 
-// ================ including & configuring tgm =======================
+// ================ Admin Notice for Kirki Recommendation =======================
 
-require( plugin_dir_path( __FILE__ ) . 'includes/TGM-Plugin-Activation-2.6.1-elevate-alerts/class-tgm-plugin-activation.php' );
-
-
-if( !function_exists( "elevate_alerts_register_required_plugins" ) ):
-
-    function elevate_alerts_register_required_plugins() {
-
-    
-        $plugins = array(
-
-
-            array(
-                'name'      => __( 'Kirki Customizer Framework', 'elevate-alerts'),
-                'slug'      => 'kirki',
-                'required'  => true,
-            ),
-
-
-        );
-
-
-        $config = array(
-
-            'id'           => 'elevate-alerts',                 // Unique ID for hashing notices for multiple instances of TGMPA.
-            'default_path' => '',                      // Default absolute path to bundled plugins.
-            'menu'         => 'tgmpa-install-plugins', // Menu slug.
-            'parent_slug'  => 'plugins.php',            // Parent menu slug.
-            'capability'   => 'manage_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
-            'has_notices'  => true,                    // Show admin notices or not.
-            'dismissable'  => false,                    // If false, a user cannot dismiss the nag message.
-            'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-            'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-            'message'      => '',     
-
-        );
-
-	    tgmpa( $plugins, $config );
-
+/**
+ * Display admin notice for Kirki plugin recommendation
+ */
+function elevate_alerts_admin_notice() {
+    // Only show to users who can install plugins
+    if (!current_user_can('install_plugins')) {
+        return;
     }
 
-endif;
+    // Check if Kirki is already active
+    if (class_exists('Kirki')) {
+        return;
+    }
 
+    // Get the install plugin URL for Kirki
+    $kirki_slug = 'kirki';
+    $install_url = wp_nonce_url(
+        add_query_arg(
+            array(
+                'action' => 'install-plugin',
+                'plugin' => $kirki_slug
+            ),
+            admin_url('update.php')
+        ),
+        'install-plugin_' . $kirki_slug
+    );
 
-add_action( 'tgmpa_register', 'elevate_alerts_register_required_plugins' );
+    // Check if Kirki is installed but not activated
+    $plugins = get_plugins();
+    $kirki_installed = false;
+    foreach ($plugins as $plugin_path => $plugin_data) {
+        if (strpos($plugin_path, 'kirki.php') !== false || $plugin_data['Name'] === 'Kirki Customizer Framework') {
+            $kirki_installed = true;
+            $activate_url = wp_nonce_url(
+                add_query_arg(
+                    array(
+                        'action' => 'activate',
+                        'plugin' => urlencode($plugin_path)
+                    ),
+                    admin_url('plugins.php')
+                ),
+                'activate-plugin_' . $plugin_path
+            );
+            break;
+        }
+    }
+
+    // Create the notice message
+    if ($kirki_installed) {
+        $button = '<a href="' . esc_url($activate_url) . '" class="button button-primary">' . __('Activate Kirki', 'elevate-alerts') . '</a>';
+        $message = __('Elevate Alerts recommends the Kirki Customizer Framework plugin to enable all customization features.', 'elevate-alerts');
+    } else {
+        $button = '<a href="' . esc_url($install_url) . '" class="button button-primary">' . __('Install Kirki', 'elevate-alerts') . '</a>';
+        $message = __('Elevate Alerts recommends the Kirki Customizer Framework plugin to enable all customization features.', 'elevate-alerts');
+    }
+
+    echo '<div class="notice notice-warning is-dismissible"><p>' . $message . ' ' . $button . '</p></div>';
+}
+
+add_action('admin_notices', 'elevate_alerts_admin_notice');
 
 
 // ======================= Kirki ==========================
@@ -120,9 +134,22 @@ add_action( 'tgmpa_register', 'elevate_alerts_register_required_plugins' );
 
 
 function elevate_alerts_customizer_controls() {
-    if( class_exists( "Kirki" ) ):
-        require_once plugin_dir_path( __FILE__ ) . "/includes/customizer.php";
-    endif;
+    if (class_exists("Kirki")) {
+        require_once plugin_dir_path(__FILE__) . "/includes/customizer.php";
+    } else {
+        // Add a simple notice to the customizer when Kirki is not active
+        add_action('customize_register', function($wp_customize) {
+            $wp_customize->add_section('elevate_alerts_notice_section', [
+                'title' => __('Elevate Alerts', 'elevate-alerts'),
+                'priority' => 1,
+                'description' => sprintf(
+                    __('For enhanced customization options, we recommend installing the %1$sKirki Customizer Framework%2$s plugin.', 'elevate-alerts'),
+                    '<a href="' . admin_url('plugins.php') . '">',
+                    '</a>'
+                ),
+            ]);
+        });
+    }
 }
 
 add_action( 'after_setup_theme', "elevate_alerts_customizer_controls" );
