@@ -1,4 +1,4 @@
-=== Elevate Alerts ===
+=== Elevate Alerts – Attractive Notification Banners ===
 Plugin Name: Elevate Alerts - Attractive Notification Banners
 Contributors: usuual
 Donate link: https://github.com/moustafa-brahimi
@@ -6,7 +6,7 @@ Tags: alerts, notifications, countdown, banner, customizer
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -168,10 +168,13 @@ When a countdown reaches zero, the timing elements continue to function. You can
 8. **Mobile Responsive** - Perfect display across all device sizes
 
 == Changelog ==
+= 1.0.2 =
+Add Developer guide section to the readme.txt
+
+= 1.0.1 =
+* replacing tgmpa with a notice to avoid warnings and confilicts
 
 = 1.0.0 =
-**Release Date: August 4, 2025**
-
 * **Initial Release**
 * Complete WordPress Customizer integration via Kirki Framework
 * TGMPA integration for seamless dependency management
@@ -185,6 +188,8 @@ When a countdown reaches zero, the timing elements continue to function. You can
 * WordPress coding standards compliance
 
 == Upgrade Notice ==
+
+
 
 = 1.0.0 =
 Welcome to Elevate Alerts! This initial release provides comprehensive alert and countdown functionality with full customization capabilities through the WordPress Customizer.
@@ -238,3 +243,102 @@ This plugin includes the following third-party assets, all of which are GPL-comp
 - Note: Only compiled output is included in distribution, not source tools
 
 All assets have been verified for GPL compatibility and licensing compliance. No proprietary or restricted-license assets are included in this plugin.
+
+== Developer Guide ==
+
+This section provides information for developers who want to contribute to or modify the Elevate Alerts plugin.
+
+= Development Environment Setup =
+
+1. **Clone the Repository**
+   ```
+   git clone https://github.com/moustafa-brahimi/elevate-alerts.git
+   cd elevate-alerts
+   ```
+
+2. **Install Dependencies**
+   ```
+   npm install
+   ```
+
+3. **Build Tools**
+   The plugin uses modern build tools to compile assets:
+   - **Webpack**: For JavaScript bundling and transpilation
+   - **PostCSS**: For CSS processing with multiple plugins
+
+= Available Build Commands =
+
+```
+# Watch and build JavaScript files
+npm run js:build
+
+# Watch and build main CSS
+npm run css:build
+
+# Watch and build admin CSS
+npm run css:build:admin
+
+# Watch and build RTL CSS
+npm run css:build:rtl
+```
+
+= File Structure =
+
+```
+elevate-alerts/
+├── assets/
+│   ├── dist/         # Compiled assets (do not edit directly)
+│   │   ├── css/
+│   │   └── js/
+│   ├── img/          # Image assets
+│   └── src/          # Source files (edit these)
+│       ├── css/
+│       └── js/
+├── includes/         # PHP includes
+├── languages/        # Translation files
+├── template-parts/   # Template files
+├── package.json      # NPM configuration
+├── postcss.config.js # PostCSS configuration
+├── webpack.config.js # Webpack configuration
+└── elevate-alerts.php # Main plugin file
+```
+
+= CSS Architecture =
+
+The plugin uses PostCSS with the following plugins:
+- postcss-import: For importing CSS files
+- postcss-nested: For nesting CSS rules
+- postcss-for: For loops in CSS
+- postcss-conditionals: For conditional rules
+- postcss-easings: For easing functions
+- postcss-random: For random values
+- postcss-preset-env: For modern CSS features
+- postcss-inline-svg: For inline SVG
+- autoprefixer: For browser prefixes
+- cssnano: For minification
+- postcss-color-mod-function: For color manipulation
+
+= JavaScript Architecture =
+
+The plugin uses Webpack and Babel to compile JavaScript:
+- ES6+ features are transpiled to ES5 for browser compatibility
+- Code is minified for production
+
+= Coding Standards =
+
+Please follow these standards when contributing:
+- Follow WordPress coding standards
+- Use proper escaping for all outputs
+- Sanitize all inputs
+- Include translators comments for strings with placeholders
+- Use meaningful variable and function names
+- Document your code with PHPDoc comments
+
+= Building for Production =
+
+Before submitting a pull request or creating a release:
+1. Run all build commands to ensure assets are up-to-date
+2. Test thoroughly in various WordPress environments
+3. Ensure all code passes WordPress coding standards
+4. Update version numbers in the main plugin file and readme.txt
+5. Update the changelog with your changes

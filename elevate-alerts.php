@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 * Requires at least:   5.0
 * Tested up to:        6.8
 * Requires PHP:        7.4
-* Version: 1.0.0
+* Version: 1.0.2
 * Author: Moustafa Brahimi
 * Author URI:          https://github.com/moustafa-brahimi
 * Text Domain:         elevate-alerts
@@ -114,14 +114,14 @@ function elevate_alerts_admin_notice() {
 
     // Create the notice message
     if ($kirki_installed) {
-        $button = '<a href="' . esc_url($activate_url) . '" class="button button-primary">' . __('Activate Kirki', 'elevate-alerts') . '</a>';
-        $message = __('Elevate Alerts recommends the Kirki Customizer Framework plugin to enable all customization features.', 'elevate-alerts');
+        $button = '<a href="' . esc_url($activate_url) . '" class="button button-primary">' . esc_html__('Activate Kirki', 'elevate-alerts') . '</a>';
+        $message = esc_html__('Elevate Alerts recommends the Kirki Customizer Framework plugin to enable all customization features.', 'elevate-alerts');
     } else {
-        $button = '<a href="' . esc_url($install_url) . '" class="button button-primary">' . __('Install Kirki', 'elevate-alerts') . '</a>';
-        $message = __('Elevate Alerts recommends the Kirki Customizer Framework plugin to enable all customization features.', 'elevate-alerts');
+        $button = '<a href="' . esc_url($install_url) . '" class="button button-primary">' . esc_html__('Install Kirki', 'elevate-alerts') . '</a>';
+        $message = esc_html__('Elevate Alerts recommends the Kirki Customizer Framework plugin to enable all customization features.', 'elevate-alerts');
     }
 
-    echo '<div class="notice notice-warning is-dismissible"><p>' . $message . ' ' . $button . '</p></div>';
+    echo '<div class="notice notice-warning is-dismissible"><p>' . esc_html($message) . ' ' . wp_kses($button, array('a' => array('href' => array(), 'class' => array()))) . '</p></div>';
 }
 
 add_action('admin_notices', 'elevate_alerts_admin_notice');
@@ -143,6 +143,7 @@ function elevate_alerts_customizer_controls() {
                 'title' => __('Elevate Alerts', 'elevate-alerts'),
                 'priority' => 1,
                 'description' => sprintf(
+                    /* translators: %1$s: opening link tag, %2$s: closing link tag */
                     __('For enhanced customization options, we recommend installing the %1$sKirki Customizer Framework%2$s plugin.', 'elevate-alerts'),
                     '<a href="' . admin_url('plugins.php') . '">',
                     '</a>'
